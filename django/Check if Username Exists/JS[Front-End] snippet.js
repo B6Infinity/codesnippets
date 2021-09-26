@@ -20,6 +20,9 @@ fetch(`usernameexists`,
         }else{
             for(let error in data["ERRORS"])
             // Manipulate the error text --(verbosity text)
+                
+                
+            // createAlertMessage('error', data["ERRORS"][error]);
         }
 
     });
