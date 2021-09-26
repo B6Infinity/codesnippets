@@ -1,0 +1,35 @@
+
+
+    <!-- ALERT MESSAGE -->
+
+    <div class="alert-box-container" id="alert-box-container">
+        {% for message in messages %}
+
+        <div class="alert-box {{message.tags}} enterAlert">
+
+            {% if message.tags == 'warning' %}
+            <span class="alert-icon fas fa-exclamation" style="color: rgb(128, 77, 2);"></span>
+            {% elif message.tags == 'info' %}
+            <span class="alert-icon fas fa-info" style="color: rgb(0, 16, 85);"></span>
+            {% elif message.tags == 'success' %}
+            <span class="alert-icon fas fa-check" style="color: rgb(2, 110, 2);"></span>
+            {% elif message.tags == 'error' %}
+            <span class="alert-icon fas fa-times" style="color: rgb(85, 0, 0);"></span>
+            {% endif %}
+
+            <span class="alert-message">{{message|safe}}
+
+            </span>
+            <span class="alert-closebtn fas fa-times" onclick="closeAlertMessage(this)"></span>
+
+
+        </div>
+
+        <script>setTimeout(function () { document.getElementsByClassName('enterAlert')[0].classList.remove('enterAlert'); }, 200);</script>
+
+
+        {% endfor %}
+    </div>
+
+    <!-- ALERTS END -->
+
