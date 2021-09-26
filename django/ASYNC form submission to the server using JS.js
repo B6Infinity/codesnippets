@@ -1,4 +1,4 @@
-let csrf_token = document.getElementsByName('csrfmiddlewaretoken')[0].value; // Add `{% csrf_token %}` in your HTML somewhere above this line of code
+let csrftoken = document.getElementsByName('csrfmiddlewaretoken')[0].value; // Add `{% csrf_token %}` in your HTML somewhere above this line of code
 let form = new FormData(); // Add Data to be sent to this 'form'
 
 fetch(`serverendpoint`,
