@@ -22,6 +22,4 @@ fetch(`usernameexists`,
             // Manipulate the error text --(verbosity text)
         }
 
-        // Work with the data sent by the server here
-
     });
