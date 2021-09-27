@@ -1,0 +1,17 @@
+.interactive_clickable:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 2px 2px 3px black;
+    padding: 0px 3px;
+    border-radius: 5px;
+}
+
+.interactive_clickable:active {
+    transform: translateY(0px);
+}
+
+.interactive_clickable {
+    user-select: none;
+    display: inline-block;
+    cursor: default;
+    transition: 0.2s;
+}
