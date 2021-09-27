@@ -17,15 +17,15 @@
 
             let symbol = ``;
             if (tag == 'warning') {
-                symbol = '<span class="alert-icon fas fa-exclamation"></span>';
+                symbol = '<span class="alert-icon fas fa-exclamation" style="color: var(--WARNING);"></span>';
             } else if (tag == 'info') {
-                symbol = '<span class="alert-icon fas fa-info" ></span>';
+                symbol = '<span class="alert-icon fas fa-info" style="color: var(--INFO);"></span>';
 
             } else if (tag == 'success') {
-                symbol = '<span class="alert-icon fas fa-check" ></span>';
+                symbol = '<span class="alert-icon fas fa-check" style="color: var(--SUCCESS);"></span>';
 
             } else if (tag == 'error') {
-                symbol = '<span class="alert-icon fas fa-times"></span>';
+                symbol = '<span class="alert-icon fas fa-times" style="color: var(--ERROR);"></span>';
 
             }
 
