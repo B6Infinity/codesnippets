@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Website</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <!-- CONTENT -->
+    <!-- FOOTER -->
+    <!-- ----------------------------------------- -->
+
+
+
+
+    <!-- HEADER -->
+    <header>
+
+        <!-- LOGO -->
+        <div id="logo">
+            <img src="https://avatars.githubusercontent.com/u/58288273?v=4" alt="">
+            <div>
+                SampleCompany
+            </div>
+        </div>
+
+
+        <!-- NAVBAR -->
+        <button id="mobile-nav-toggle" onclick="toggleNavMenu()" menu_visibility="false"></button>
+        <nav id="header_nav" visibility="false">
+            <div class="nav_buttons">
+                <div class="nav_button"><a href="#">Home</a></div>
+                <div class="nav_button"><a href="#">About</a></div>
+                <div class="nav_button"><a href="#">Contact</a></div>
+                <div class="nav_button"><a href="#">Link4</a></div>
+
+            </div>
+        </nav>
+
+
+
+    </header>
+
+    <!-- HEADER STYLE -->
+    <style>
+        /* HEADER */
+        header {
+            background-color: #292929;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+            font-size: 1em;
+        }
+
+
+
+        /* LOGO */
+        #logo {
+            background-color: transparent;
+            cursor: pointer;
+            width: 4rem;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            user-select: none;
+        }
+
+        #logo img {
+            border-radius: 50%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        #logo div {
+            font-weight: 800;
+            background-color: transparent;
+            margin: 0 7px;
+        }
+
+
+
+        /* NAVBAR */
+
+        .nav_buttons {
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav_button {
+            background-color: transparent;
+            margin: 10px;
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        .nav_button a {
+            transition: all 0.3s ease 0s;
+        }
+
+        .nav_button a:hover {
+            color: var(--theme_color);
+        }
+
+        #mobile-nav-toggle {
+            display: none;
+        }
+
+
+        /* PHONES */
+        @media only screen and (max-width: 720px) {
+
+
+            /* HEADER */
+            #logo div {
+                display: none;
+            }
+
+            nav {
+                z-index: 1000;
+                position: fixed;
+                inset: 0 0 0 30%;
+                background-color: rgba(187, 187, 187, 0.209);
+
+                transform: translateX(100%);
+                transition: 0.2s;
+            }
+
+            nav[visibility="true"] {
+                transform: translateX(0%);
+            }
+
+            .nav_buttons {
+                flex-direction: column;
+                padding: min(20vh, 8rem) 2rem;
+            }
+
+            .nav_button {
+                padding: 2rem;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            @supports (backdrop-filter: blur(1rem)) {
+                nav {
+                    background-color: hsl(0 0% 100% / 0.1);
+                    backdrop-filter: blur(1rem);
+                }
+            }
+
+            #mobile-nav-toggle {
+                display: block;
+                background: url('/Assets/hamburger_menu.png');
+                width: 1.8rem;
+                aspect-ratio: 1;
+                background-repeat: no-repeat;
+                border: 0;
+
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                z-index: 9999;
+            }
+
+            #mobile-nav-toggle[menu_visibility="true"] {
+                background: url('/Assets/multiply_icon.png');
+            }
+
+
+        }
+    </style>
+    <!-- NAVBAR SCRIPT -->
+    <script>
+        let navMenu = document.querySelector('nav');
+        let navButton = document.getElementById('mobile-nav-toggle');
+
+        function toggleNavMenu() {
+            if (navMenu.getAttribute("visibility") == "false") {
+                navMenu.setAttribute("visibility", "true");
+                navButton.setAttribute('menu_visibility', "true");
+            } else {
+                navMenu.setAttribute("visibility", "false");
+                navButton.setAttribute('menu_visibility', "false");
+            }
+        }
+    </script>
+
+
+    <!-- <img style="width: 100%;" src="http://source.unsplash.com/1600x700/?man,suit" alt=""> -->
+    <!-- http://source.unsplash.com/400x300/?man,nature -->
+    <!-- https://dummyimage.com/1600x900/0f0f0f -->
+
+
+
+
+    <!-- CONTENT -->
+    <div id="content">
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div>
+            Created by <a href="#">@broteen_das</a>
+        </div>
+
+        <hr>
+
+        <div style="text-align:left;">
+            Copyright © 2022 sample.idk [INVALID]
+        </div>
+
+    </footer>
+
+    <!-- FOOTER STYLE -->
+    <style>
+        /* FOOTER */
+        footer {
+            width: 100%;
+            background-color: #0a0a0a;
+
+            /* Placing (Include when page does not scroll)*/
+            position: absolute;
+            bottom: 0%;
+            /*  */
+
+
+            /* Props */
+            padding: 15px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 10px;
+        }
+
+        footer div {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            background-color: transparent;
+        }
+    </style>
+
+</body>
+
+</html>
