@@ -54,3 +54,5 @@ void handleRoot() {
 void handleNotFound(){
   server.send(404, "text/plain", "404: Not found"); // Send HTTP status 404 (Not Found) when there's no handler for the URI in the request
 }
+
+// Copied from https://tttapa.github.io/ESP8266/Chap10%20-%20Simple%20Web%20Server.html
