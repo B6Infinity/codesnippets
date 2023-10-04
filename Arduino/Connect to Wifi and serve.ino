@@ -16,7 +16,7 @@ void setup(void){
   delay(10);
   Serial.println('\n');
 
-  wifiMulti.addAP("CLIFTOR", "12345678.");   // add Wi-Fi network you want to connect to
+  wifiMulti.addAP("__SSID__", "__PASSWORD__");   // add Wi-Fi network you want to connect to
 
   Serial.println("Connecting ...");
   int i = 0;
