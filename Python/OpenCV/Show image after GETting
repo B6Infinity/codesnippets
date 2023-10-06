@@ -1,0 +1,5 @@
+res = requests.get('___ADDRESS___/snap.png')
+    
+bytedata = np.asarray(bytearray(res.content))
+frame = cv2.imdecode(bytedata, cv2.IMREAD_COLOR)
+cv2.imshow('snap', frame)
