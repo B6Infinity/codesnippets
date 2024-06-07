@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <world name="indoor_world">
+    
+        <model name="base_link">
+            <!-- Add your base_link properties and child elements here -->
+            <static>1</static>
+        </model>
+    
+    </world>
+</sdf>
