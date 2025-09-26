@@ -15,6 +15,8 @@ int main(void)
   uint32_t period = 33; // ARR
   uint32_t pulse  = 24;   // CMP (0.8 * 30000 duty)
 
+  // f_PWM = f_SYSTEM / Ticks Per Cycle
+  
   HAL_LPTIM_PWM_Start(&hlptim1, period, pulse);
 
   ...
